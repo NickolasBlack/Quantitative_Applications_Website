@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documents | Quantitative Applications</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Quantitative Applications</a>
+    <nav class="main-nav"><a href="index.html">Home</a><a class="active" href="documents.html">Documents</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+    <div class="header-actions"><button class="icon-btn" aria-label="Search">⌕</button><button class="icon-btn" aria-label="Cart" onclick="showCart()">🛒 <span id="cart-count">0</span></button></div>
+  </header>
+
+  <main class="documents-page">
+    <section class="documents-hero container">
+      <p class="eyebrow dark">Marketplace</p>
+      <h1>Design Documents</h1>
+      <p>Technical PDFs for quantitative finance, trading infrastructure, derivatives, and research systems.</p>
+    </section>
+
+    <section class="marketplace container">
+      <aside class="filters">
+        <h3>Categories</h3>
+        <button class="filter active" data-filter="all">All Documents</button>
+        <button class="filter" data-filter="trading">Trading Systems</button>
+        <button class="filter" data-filter="market-data">Market Data</button>
+        <button class="filter" data-filter="risk">Risk Management</button>
+        <button class="filter" data-filter="options">Options & Derivatives</button>
+        <button class="filter" data-filter="infrastructure">Infrastructure</button>
+        <button class="filter" data-filter="mathematics">Mathematics</button>
+        <button class="filter" data-filter="research">Research</button>
+      </aside>
+
+      <div class="marketplace-main">
+        <div class="marketplace-toolbar">
+          <input id="document-search" type="search" placeholder="Search documents..." />
+          <select id="sort-select" aria-label="Sort documents">
+            <option value="newest">Sort: Newest</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="title">Title: A–Z</option>
+          </select>
+        </div>
+
+        <div class="document-grid" id="document-grid">
+          <article class="store-card" data-category="trading" data-title="Event Driven Trading System" data-price="49" data-search="event driven trading system architecture order gateway strategy engine risk execution">
+            <a href="product.html?doc=event-driven" class="cover cover-dark"><span>EVENT DRIVEN</span><strong>TRADING SYSTEM</strong><small>Architecture & Design</small></a>
+            <div class="store-card-body"><span class="pill">Trading Systems</span><h3><a href="product.html?doc=event-driven">Event Driven Trading System</a></h3><p>Gateway-to-strategy architecture and execution workflow.</p><div class="store-actions"><strong>$49.00</strong><button class="btn btn-primary compact" onclick="addToCart('Event Driven Trading System',49)">Add to Cart</button></div></div>
+          </article>
+
+          <article class="store-card" data-category="risk" data-title="Risk Management Framework" data-price="39" data-search="risk management position limits pnl exposure kill switch trading">
+            <a href="product.html?doc=risk" class="cover cover-blue"><span>RISK MANAGEMENT</span><strong>FRAMEWORK</strong><small>Controls & Limits</small></a>
+            <div class="store-card-body"><span class="pill">Risk Management</span><h3><a href="product.html?doc=risk">Risk Management Framework</a></h3><p>Controls for exposure, position limits, P&amp;L, and kill switches.</p><div class="store-actions"><strong>$39.00</strong><button class="btn btn-primary compact" onclick="addToCart('Risk Management Framework',39)">Add to Cart</button></div></div>
+          </article>
+
+          <article class="store-card" data-category="options" data-title="Options Pricing Models" data-price="49" data-search="options pricing black scholes monte carlo finite difference greeks derivatives">
+            <a href="product.html?doc=options-pricing" class="cover cover-cyan"><span>OPTIONS PRICING</span><strong>MODELS</strong><small>Derivatives Engineering</small></a>
+            <div class="store-card-body"><span class="pill">Options & Derivatives</span><h3><a href="product.html?doc=options-pricing">Options Pricing Models</a></h3><p>Black–Scholes, Monte Carlo, finite-difference, and Greeks.</p><div class="store-actions"><strong>$49.00</strong><button class="btn btn-primary compact" onclick="addToCart('Options Pricing Models',49)">Add to Cart</button></div></div>
+          </article>
+
+          <article class="store-card" data-category="infrastructure" data-title="Exchange Architecture" data-price="59" data-search="exchange architecture matching engine order book low latency market">
+            <a href="product.html?doc=exchange" class="cover cover-slate"><span>EXCHANGE</span><strong>ARCHITECTURE</strong><small>Matching & Order Books</small></a>
+            <div class="store-card-body"><span class="pill">Infrastructure</span><h3><a href="product.html?doc=exchange">Exchange Architecture</a></h3><p>Reference design for order books, matching, and market events.</p><div class="store-actions"><strong>$59.00</strong><button class="btn btn-primary compact" onclick="addToCart('Exchange Architecture',59)">Add to Cart</button></div></div>
+          </article>
+
+          <article class="store-card" data-category="infrastructure" data-title="Low Latency Design" data-price="49" data-search="low latency java c++ spsc queue memory pool performance systems">
+            <a href="product.html?doc=low-latency" class="cover cover-light"><span>LOW LATENCY</span><strong>DESIGN</strong><small>Performance Engineering</small></a>
+            <div class="store-card-body"><span class="pill">Infrastructure</span><h3><a href="product.html?doc=low-latency">Low Latency Design</a></h3><p>Memory, concurrency, queues, and performance-oriented architecture.</p><div class="store-actions"><strong>$49.00</strong><button class="btn btn-primary compact" onclick="addToCart('Low Latency Design',49)">Add to Cart</button></div></div>
+          </article>
+
+          <article class="store-card" data-category="market-data" data-title="Market Data Pipeline" data-price="39" data-search="market data websocket alpaca feed parser normalization event pipeline">
+            <a href="product.html?doc=market-data" class="cover cover-blue"><span>MARKET DATA</span><strong>PIPELINE</strong><small>Feeds & Processing</small></a>
+            <div class="store-card-body"><span class="pill">Market Data</span><h3><a href="product.html?doc=market-data">Market Data Pipeline</a></h3><p>Feed ingestion, parsing, normalization, routing, and persistence.</p><div class="store-actions"><strong>$39.00</strong><button class="btn btn-primary compact" onclick="addToCart('Market Data Pipeline',39)">Add to Cart</button></div></div>
+          </article>
+
+          <article class="store-card" data-category="research" data-title="Strategy Development" data-price="39" data-search="strategy development research signals backtest workflow quantitative">
+            <a href="product.html?doc=strategy" class="cover cover-cyan"><span>STRATEGY</span><strong>DEVELOPMENT</strong><small>Research Workflow</small></a>
+            <div class="store-card-body"><span class="pill">Research</span><h3><a href="product.html?doc=strategy">Strategy Development</a></h3><p>A structured path from research question to signal, test, and deployment.</p><div class="store-actions"><strong>$39.00</strong><button class="btn btn-primary compact" onclick="addToCart('Strategy Development',39)">Add to Cart</button></div></div>
+          </article>
+
+          <article class="store-card" data-category="mathematics" data-title="C++ Financial Engineering" data-price="49" data-search="c++ financial engineering numerical methods monte carlo finite difference mathematics">
+            <a href="product.html?doc=cpp" class="cover cover-slate"><span>C++</span><strong>FINANCIAL ENGINEERING</strong><small>Numerical Methods</small></a>
+            <div class="store-card-body"><span class="pill">Mathematics</span><h3><a href="product.html?doc=cpp">C++ Financial Engineering</a></h3><p>Implementation patterns for computational finance and numerical methods.</p><div class="store-actions"><strong>$49.00</strong><button class="btn btn-primary compact" onclick="addToCart('C++ Financial Engineering',49)">Add to Cart</button></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="cart-drawer" id="cart-drawer" aria-hidden="true">
+    <div class="cart-panel"><button class="close-btn" onclick="hideCart()">×</button><h2>Your Cart</h2><div id="cart-items"></div><div class="cart-total">Total: <strong id="cart-total">$0.00</strong></div><button class="btn btn-primary full" onclick="mockCheckout()">Checkout</button><p class="small-note">Checkout is a prototype. Stripe can later enable Apple Pay, Google Pay, and cards.</p></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

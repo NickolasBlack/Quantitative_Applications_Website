@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Quantitative Applications — technical design documents for quantitative finance, trading systems, and financial technology." />
+  <title>Quantitative Applications</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Quantitative Applications</a>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a class="active" href="index.html">Home</a>
+      <a href="documents.html">Documents</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Search" onclick="document.getElementById('global-search').focus()">⌕</button>
+      <a class="icon-btn" href="documents.html" aria-label="Cart">🛒</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero home-hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <p class="eyebrow">Quantitative systems • financial engineering • research</p>
+        <h1>Design. Model. Trade.<br>Real-World Quantitative Systems.</h1>
+        <p class="hero-copy">High-quality design documents, architectures, and research frameworks for quantitative finance, trading systems, and financial technology.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="documents.html">Browse Documents →</a>
+          <a class="btn btn-secondary" href="about.html">About the Firm</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-strip">
+      <div class="container search-wrap">
+        <label for="global-search">Find a document</label>
+        <input id="global-search" type="search" placeholder="Search trading systems, risk, options, infrastructure..." oninput="homeSearch(this.value)" />
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark">Featured Documents</p>
+          <h2>Technical design work you can use.</h2>
+        </div>
+        <a class="text-link" href="documents.html">View all documents →</a>
+      </div>
+
+      <div class="card-grid" id="featured-grid">
+        <article class="product-card" data-search="event driven trading system architecture market order gateway strategy risk">
+          <a href="product.html?doc=event-driven" class="cover cover-dark">
+            <span>EVENT DRIVEN</span><strong>TRADING SYSTEM</strong><small>Architecture & Design</small>
+          </a>
+          <div class="product-meta">
+            <span class="pill">Trading Systems</span>
+            <h3><a href="product.html?doc=event-driven">Event Driven Trading System</a></h3>
+            <p>Architecture for gateways, queues, strategy engines, risk, and execution.</p>
+            <div class="product-footer"><strong>$49.00</strong><a class="mini-btn" href="product.html?doc=event-driven">View</a></div>
+          </div>
+        </article>
+
+        <article class="product-card" data-search="options pricing framework derivatives black scholes monte carlo finite difference">
+          <a href="product.html?doc=options-pricing" class="cover cover-blue">
+            <span>OPTIONS PRICING</span><strong>FRAMEWORK</strong><small>Models & Implementation</small>
+          </a>
+          <div class="product-meta">
+            <span class="pill">Options & Derivatives</span>
+            <h3><a href="product.html?doc=options-pricing">Options Pricing Framework</a></h3>
+            <p>Reusable model design for Black–Scholes, Monte Carlo, and finite-difference methods.</p>
+            <div class="product-footer"><strong>$39.00</strong><a class="mini-btn" href="product.html?doc=options-pricing">View</a></div>
+          </div>
+        </article>
+
+        <article class="product-card" data-search="low latency architecture java c++ memory queue systems performance">
+          <a href="product.html?doc=low-latency" class="cover cover-cyan">
+            <span>LOW LATENCY</span><strong>ARCHITECTURE</strong><small>Performance Systems</small>
+          </a>
+          <div class="product-meta">
+            <span class="pill">Infrastructure</span>
+            <h3><a href="product.html?doc=low-latency">Low Latency Architecture</a></h3>
+            <p>Design patterns for high-throughput event processing, memory, and concurrency.</p>
+            <div class="product-footer"><strong>$59.00</strong><a class="mini-btn" href="product.html?doc=low-latency">View</a></div>
+          </div>
+        </article>
+
+        <article class="product-card" data-search="market data pipeline websocket alpaca feed parsing normalization">
+          <a href="product.html?doc=market-data" class="cover cover-light">
+            <span>MARKET DATA</span><strong>PIPELINE</strong><small>Feeds & Processing</small>
+          </a>
+          <div class="product-meta">
+            <span class="pill">Market Data</span>
+            <h3><a href="product.html?doc=market-data">Market Data Pipeline</a></h3>
+            <p>Reference architecture for ingestion, normalization, event routing, and storage.</p>
+            <div class="product-footer"><strong>$39.00</strong><a class="mini-btn" href="product.html?doc=market-data">View</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alt-section">
+      <div class="container value-grid">
+        <div><span class="value-icon">▣</span><h3>In-Depth Documentation</h3><p>Architecture, rationale, diagrams, interfaces, and implementation guidance.</p></div>
+        <div><span class="value-icon">⌁</span><h3>Practical & Real-World</h3><p>Documents designed around production-minded quantitative and trading workflows.</p></div>
+        <div><span class="value-icon">⬇</span><h3>Instant Access</h3><p>Purchase securely and download your PDF immediately after payment integration is enabled.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><div class="brand footer-brand">Quantitative Applications</div><p>Design documents for quantitative finance and financial technology.</p></div>
+      <div><h4>Explore</h4><a href="documents.html">Documents</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+      <div><h4>Legal</h4><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Refund Policy</a></div>
+    </div>
+    <div class="container copyright">© 2026 Quantitative Applications. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
